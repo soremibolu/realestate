@@ -244,26 +244,6 @@ function Searchbox() {
               
 
 
-      const customStyles = {
-        option: (provided, state) => ({
-          ...provided,
-          color: state.isSelected ? 'white' : 'grey',
-          backgroundColor: state.isSelected ? 'black' : 'white',
-          padding: 20,
-        }),
-        control: () => ({
-          // none of react-select's styles are passed to <Control />
-          width: 300,
-          border:'1px solid red',
-        }),
-        singleValue: (provided, state) => {
-          const opacity = state.isDisabled ? 0.5 : 1;
-          const transition = 'opacity 300ms';
-      
-          return { ...provided, opacity, transition };
-        }
-      }
-
         // Select Theme
   const theme = (theme) => ({
     ...theme,
