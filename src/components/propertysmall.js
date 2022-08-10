@@ -17,6 +17,10 @@ import {MdKingBed} from 'react-icons/md';
 import {MdChair} from 'react-icons/md';
 import {FaPoundSign} from 'react-icons/fa';
 
+
+// Utilities
+import { device } from "../utilities/Breakpoints";
+
 const Propertysm = styledComponents.div`
   width:18rem ;
   height: auto;
@@ -27,9 +31,12 @@ const Propertysm = styledComponents.div`
   box-shadow: 10px 10px 5px lightgrey;
   margin-bottom:2rem;
 
+
+
   .carousel-details{
       width:100%;
       height:auto;
+
 
 
     .carousel{
@@ -42,9 +49,6 @@ const Propertysm = styledComponents.div`
         }
     }
     
-    .details-cover{
-        display:flex; 
-    }
 
     .details{
         width:70%;
@@ -100,6 +104,28 @@ const Propertysm = styledComponents.div`
             }
         }
 
+
+        @media ${device.mobile} {
+            .p-title{
+                font-weight:bold;
+                margin-bottom:0rem;
+                font-size:1.2rem;
+            }
+            .p-address{
+                margin-top:0.3rem;
+                color:grey;
+            }
+            .p-price{
+                margin:.4rem;
+                margin-left:.8rem;
+                font-size:1.2rem;
+            }
+            .pounds{
+                position:relative;
+                top:.1rem;
+            }
+        }
+
     }
     .h-agent{
         width:30%;
@@ -108,6 +134,10 @@ const Propertysm = styledComponents.div`
             margin-top:40%;
             margin-right:0rem;
             width:calc(100% - 1rem);
+        }
+    
+        @media ${device.mobile} {
+            display:none;
         }
     }
   }
@@ -137,7 +167,6 @@ const Propertysm = styledComponents.div`
         padding-bottom: 60%;
     }
 
-    
 
 `;
 

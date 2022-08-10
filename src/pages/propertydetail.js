@@ -22,6 +22,8 @@ import {FaPoundSign} from 'react-icons/fa';
 import Map from "../components/Map";
 
 import ScrollToTop from "../components/ScrollToTop";
+// Utilities
+import { device } from "../utilities/Breakpoints";
 
 const Pdetail = styledComponents.div`
 display:flex;
@@ -29,6 +31,10 @@ justify-content:space-between;
 
 .propertylist{
     width:53rem;
+
+    @media ${device.mobile} {
+        width: 100%;
+      }
 
     .carousel{
         width:100%;
@@ -77,6 +83,10 @@ justify-content:space-between;
 
         .h-detail{
             margin:.4rem;
+
+            @media ${device.mobile} {
+                display:block;
+              }
             .h-iconba{
                 font-size:1.5rem;
             }
@@ -103,6 +113,10 @@ justify-content:space-between;
 .adsandothers{
     width:18rem;
     display:inline-block;
+
+    @media ${device.mobile} {
+        display:none;
+      }
 }
 
 .select__input-container{

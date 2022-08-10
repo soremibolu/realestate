@@ -18,6 +18,9 @@ import {MdChair} from 'react-icons/md';
 import {GrMail} from 'react-icons/gr';
 import {FaHeart} from 'react-icons/fa';
 import {FaPoundSign} from 'react-icons/fa';
+// Utilities
+import { device } from "../utilities/Breakpoints";
+
 
 const Property = styledComponents.div`
   width:53rem ;
@@ -28,12 +31,20 @@ const Property = styledComponents.div`
   box-shadow: 10px 10px 5px lightgrey;
   margin-bottom:2rem;
 
+  @media ${device.mobile} {
+    width:100%;
+  }
+
     .othcov{
         width:50%;
         height:auto;
         display:flex;
         color:black;
         text-decoration:none;
+
+        @media ${device.mobile} {
+            width:100%;
+        }
     }
 
   .carousel-details{
@@ -41,10 +52,19 @@ const Property = styledComponents.div`
       height:auto;
       display:flex;
 
+      @media ${device.mobile} {
+        flex-direction: column;
+      }
+
 
     .carousel{
         width:50%;
         height:100%;
+        
+        @media ${device.mobile} {
+            display:block;
+            width:100%;
+          }
         
         img{
             width:100%; 
@@ -117,6 +137,10 @@ const Property = styledComponents.div`
             margin-right:1rem;
             width:calc(100% - 1rem);
         }
+
+        @media ${device.mobile} {
+           display:none;
+          }
     }
   }
 
@@ -125,6 +149,11 @@ const Property = styledComponents.div`
     height:2.3rem;
     display:flex;
     justify-content: space-between;
+
+    @media ${device.mobile} {
+        flex-direction: column;
+        height:auto;
+      }
 
 
     p{

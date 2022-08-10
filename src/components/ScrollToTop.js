@@ -10,7 +10,7 @@ const ScrollTop = styled.div`
     right: 4%;
     bottom: 10%;
     font-size: 2.2rem;
-    z-index: 1;
+    z-index: 10;
     cursor: pointer;
     color: white;
 

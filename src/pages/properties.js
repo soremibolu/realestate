@@ -9,14 +9,23 @@ import Searchboxsm from "../components/searchboxsmall";
 import Select from 'react-select';
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/footer";
+// Utilities
+import { device } from "../utilities/Breakpoints";
 
 const PropertyCover = styledComponents.div`
 display:flex;
 justify-content:space-between;
 
+.propertylist{
+  width:100%;
+}
 .adsandothers{
     width:18rem ;
     display:inline-block;
+
+    @media ${device.mobile} {
+      display:none;
+    }
 }
 
 .select__input-container{
@@ -28,11 +37,24 @@ justify-content:space-between;
     justify-content: space-between;
     width:53rem;
 
+    @media ${device.mobile} {
+      width:100%;
+      margin-bottom:5rem;
+      flex-direction: column;
+    }
+
     .filter{
         width:10rem;
         height:auto;
         display:flex;
         align-items:center;
+
+        @media ${device.mobile} {
+          margin-bottom:1rem;
+          position:absolute;
+          margin-top:5rem;
+          z-index:10;
+        }
 
         .basic-single{
             width:100%;

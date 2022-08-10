@@ -7,7 +7,6 @@ import Recent from "../parts/home/recentlistings";
 import Footer from "../components/footer";
 import ScrollToTop from "../components/ScrollToTop";
 
-
 function Home() {
   return (
     <>
@@ -28,7 +27,7 @@ function Home() {
         
     </PageWrap>
     <Footer />
-        <ScrollToTop />
+    <ScrollToTop />
     </>
   );
 }

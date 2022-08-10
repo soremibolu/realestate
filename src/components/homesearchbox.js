@@ -5,6 +5,8 @@ import Select from 'react-select';
 import { Link } from "react-router-dom";
 
 import Button from "./button";
+// Utilities
+import { device } from "../utilities/Breakpoints";
 
 const Searchcover = styledComponents.div`
   width:66rem;
@@ -15,9 +17,17 @@ const Searchcover = styledComponents.div`
   box-shadow: 10px 5px 15px black;
   z-index:18;
 
+  @media ${device.mobile} {
+    width: calc(100% - 2rem) ;
+  }
+
   h1{
       font-size: 3rem;
       margin-bottom:.5rem;
+
+      @media ${device.mobile} {
+        font-size:1rem;
+      }
   }
 
   .s-type{
@@ -32,6 +42,12 @@ const Searchcover = styledComponents.div`
         transition:.3s;
         cursor:pointer;
         font-size:1rem;
+
+        @media ${device.mobile} {
+          padding: .7rem;
+          font-size:.8rem;
+        }
+
     }
 
   }
@@ -51,12 +67,21 @@ const Searchcover = styledComponents.div`
       padding: .6rem;
       padding-left:0;
       width:22rem;
+
+      @media ${device.mobile} {
+        width:110%;
+        border-bottom: 1px solid gray;
+      }
   }
 
   .mainsearch-details{
       display:flex;
       justify-content: space-between;
       width:80%;
+
+      @media ${device.mobile} {
+        display: inline-block;
+      }
 
       .bcover{
           display:flex;
@@ -74,6 +99,10 @@ const Searchcover = styledComponents.div`
       width:9rem;
       z-index:11;
 
+      @media ${device.mobile} {
+        margin:.7rem 0;
+      }
+
       h3{
           margin-top:.3rem;
       }
@@ -86,10 +115,20 @@ const Searchcover = styledComponents.div`
         background-color:white;
         border-radius: .2rem;
         box-shadow: 10px 5px 15px black;
+        z-index:11;
 
+        @media ${device.mobile} {
+          flex-direction:column;
+          position:absolute;
+          width: 65%;
+        }
 
         .opt-1{
-            width:47%;
+            width:100%;
+
+            @media ${device.mobile} {
+              width: 100%;
+            }
             p{
                 margin:.2rem 0;
             }

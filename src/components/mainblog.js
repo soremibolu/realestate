@@ -3,6 +3,9 @@ import styledComponents from "styled-components";
 import blogimg from "../images/img1.jpeg";
 import { Link } from "react-router-dom";
 
+// Utilities
+import { device } from "../utilities/Breakpoints";
+
 const Bigblog = styledComponents.div`
   width:60%;
   margin:.5rem 0;
@@ -36,6 +39,11 @@ const Bigblog = styledComponents.div`
         color:black;
         text-decoration-color:grey;
     }
+  }
+
+
+  @media ${device.mobile} {
+    width:100%;
   }
 `;
 

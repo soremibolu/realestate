@@ -2,6 +2,9 @@ import React from "react";
 import styledComponents from "styled-components";
 import blogimg from "../images/img2.jpeg";
 
+// Utilities
+import { device } from "../utilities/Breakpoints";
+
 const Blogsm = styledComponents.div`
     width:35%;
     margin:.5rem 0;
@@ -28,7 +31,9 @@ const Blogsm = styledComponents.div`
             font-size:0.9rem
         }
     }
-   
+    @media ${device.mobile} {
+        display:none;
+      }
 `;
 
 function Blogoth() {
